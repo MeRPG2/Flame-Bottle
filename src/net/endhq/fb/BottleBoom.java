@@ -13,8 +13,9 @@ public class BottleBoom implements Runnable {
 	
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		i.getLocation().getWorld().createExplosion(i.getLocation().getX(), i.getLocation().getY(), i.getLocation(), arg3, arg4, arg5)
+		// TODO particles
+		i.getLocation().getWorld().createExplosion(i.getLocation().getX(), i.getLocation().getY(), i.getLocation().getZ(), 2F, true, false);
+		i.remove();
 	}
 
 }

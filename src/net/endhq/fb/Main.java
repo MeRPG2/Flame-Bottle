@@ -9,9 +9,9 @@ import org.bukkit.entity.Item;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.Vector;
 
 public class Main extends JavaPlugin implements Listener {
 	@Override
@@ -33,5 +33,10 @@ public class Main extends JavaPlugin implements Listener {
 		Item i = e.getPlayer().getWorld().dropItem(e.getPlayer().getLocation(), new ItemStack(Material.getMaterial(2261), 1));
 		i.setVelocity(e.getPlayer().getLocation().getDirection().multiply(1.5D));
 		
+	}
+	
+	@EventHandler
+	public void onPlayerPickupItemEvent(PlayerPickupItemEvent e) {
+		if(e.getItem().getItemStack().getType()==Material.getMaterial(2261)) e.setCancelled(true);
 	}
 }
