@@ -47,7 +47,6 @@ public class Main extends JavaPlugin implements Listener {
 	
 	@EventHandler
 	public void onPlayerInteractEvent(PlayerInteractEvent e) {
-		//Todo qualifiers
 		if(!(e.getAction()==Action.RIGHT_CLICK_AIR || e.getAction()==Action.RIGHT_CLICK_BLOCK) || 
 				!(e.getPlayer().getItemInHand().getType()==Material.getMaterial(2261)) ||
 				!(e.getPlayer().getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.RED+"Fire "+ChatColor.GOLD+"Bomb"))) 
