@@ -53,6 +53,7 @@ public class Main extends JavaPlugin implements Listener {
 			return;
 		Item i = e.getPlayer().getWorld().dropItem(e.getPlayer().getEyeLocation(), new ItemStack(Material.getMaterial(2261), 1));
 		i.setVelocity(e.getPlayer().getLocation().getDirection().multiply(1.5D));
+		i.setPickupDelay(100000);
 		ItemStack old = new ItemStack(e.getPlayer().getItemInHand().getType(), e.getPlayer().getItemInHand().getAmount() - 1);
         e.getPlayer().setItemInHand(old);
 		Bukkit.getScheduler().runTaskLater(this, new BottleBoom(i), 30L);
