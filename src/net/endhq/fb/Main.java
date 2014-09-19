@@ -1,5 +1,8 @@
 package net.endhq.fb;
 
+import net.endhq.particles.ParticlesLibrary;
+import net.endhq.particles.ParticlesType;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -57,6 +60,40 @@ public class Main extends JavaPlugin implements Listener {
 		ItemStack old = new ItemStack(e.getPlayer().getItemInHand().getType(), e.getPlayer().getItemInHand().getAmount() - 1);
         e.getPlayer().setItemInHand(old);
 		Bukkit.getScheduler().runTaskLater(this, new BottleBoom(i), 30L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 1L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 2L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 3L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 4L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 5L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 6L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 7L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 8L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 9L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 10L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 11L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 12L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 13L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 14L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 15L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 16L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 17L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 18L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 19L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 20L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 21L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 22L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 23L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 24L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 25L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 26L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 27L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 28L);
+		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 29L);
+		try {
+			ParticlesLibrary.createGlobalParticleEffect(e.getPlayer().getEyeLocation(), ParticlesType.LARGE_SMOKE, 1F, 30);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
 	}
 	
 	@EventHandler
