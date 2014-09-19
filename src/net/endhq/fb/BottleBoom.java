@@ -14,6 +14,7 @@ public class BottleBoom implements Runnable {
 	@Override
 	public void run() {
 		// TODO particles
+		if(!Main.fbon) return;
 		i.getLocation().getWorld().createExplosion(i.getLocation().getX(), i.getLocation().getY(), i.getLocation().getZ(), 2F, true, false);
 		i.remove();
 	}

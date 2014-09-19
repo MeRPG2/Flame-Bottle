@@ -1,0 +1,11 @@
+name: FireBombs
+version: 0.5
+main: net.endhq.fb.Main
+author: MeRPG
+commands:
+    givefirebomb:
+        description: Gives a player a fire bomb.
+        usage: /<command> player
+    firebombtoggle:
+        description: Toggle usage of fire bombs.
+        usage: /<command>
