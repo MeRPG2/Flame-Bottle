@@ -90,7 +90,7 @@ public class Main extends JavaPlugin implements Listener {
 		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 28L);
 		Bukkit.getScheduler().runTaskLater(this, new BottleParticles(i), 29L);
 		try {
-			ParticlesLibrary.createGlobalParticleEffect(e.getPlayer().getEyeLocation(), ParticlesType.LARGE_SMOKE, 1F, 30);
+			ParticlesLibrary.createGlobalParticleEffect(e.getPlayer().getEyeLocation(), ParticlesType.LARGE_SMOKE, 0.05F, 30);
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}

@@ -14,7 +14,7 @@ public class BottleParticles implements Runnable {
 	@Override
 	public void run() {
 		try {
-			ParticlesLibrary.createGlobalParticleEffect(i.getLocation(), ParticlesType.FLAME, 0F, 10);
+			ParticlesLibrary.createGlobalParticleEffect(i.getLocation(), ParticlesType.FLAME, 0.01F, 10);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
